@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P6SW86D");
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>Разработка продукта: от традиционного подхода до no-code</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- prettier-ignore -->
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+        --ribbon-size: 40px;
+        --slide-side: 41px;
+        --color-grey: #353535;
+      }
+
+      .progress::before {
+        background-color: #ff0000;
+      }
+
+      .slide {
+        padding-top: 51px;
+        background-image: url("pictures/slide-cover.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+      }
+
+      .slide.clear {
+        background-image: none;
+      }
+
+      .slide::after {
+        top: auto;
+        bottom: 10px;
+        left: auto;
+        right: 30px;
+        background: none;
+        color: #1a1a1a;
+      }
+
+      .slide h2 {
+        color: #1a1a1a;
+        font-size: 60px;
+      }
+
+      .slide h2.shout {
+        font-size: 100px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 80%;
+      }
+
+      .slide h2.shout.elevated {
+        margin-top: -35px;
+      }
+
+      .slide h2.shout.small {
+        font-size: 3em;
+      }
+
+      .slide .brand {
+        color: #cc0000;
+      }
+
+      .slide ol,
+      .slide ul {
+        padding-left: 40px;
+      }
+
+      .slide li {
+        font-size: 28px;
+      }
+
+      .slide pre {
+        font-size: 21px;
+        padding-left: 41px;
+      }
+
+      .cover {
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body class="shower list">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P6SW86D"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="caption">
+      <h1>Разработка продукта: от традиционного подхода до no-code</h1>
+      <p>
+        <a href="https://alexey-avdeev.com/">Алексей Авдеев</a>,
+        <a href="https://mish.design/">Mish</a>
+      </p>
+    </header>
+
+    <section class="slide clear" id="cover">
+      <div style="width: 640px; padding-top: 30px; margin-left: -10px">
+        <h2>Разработка продукта: от традиционного подхода до no-code</h2>
+        <p>
+          <a href="https://alexey-avdeev.com/">Алексей Авдеев</a>,
+          <a href="https://mish.design/">Mish</a>
+        </p>
+      </div>
+      <style>
+        .shower #cover {
+          --slide-side: 60px;
+        }
+        #cover {
+          background: #fff url("pictures/title-cover.png") no-repeat center center;
+          background-size: contain;
+        }
+        #cover h2 {
+          margin: 0;
+          color: #000;
+          font-size: 62px;
+        }
+        #cover p {
+          margin: 18px 0 0;
+          color: #000;
+          font-size: 24px;
+        }
+        #cover p a {
+          color: #000;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/mish_2023.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/tweet1.png" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/fc2022.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/skillbox.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/jsonapi_youtube.jpg" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/docker_youtube.jpg" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/maxresdefault.jpg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Что такое продукт?</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout small brand">
+        1. Жизненный цикл продукта<br /><span style="font-size: 0.6em">(PLM)</span>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/ea16xvjj5dk51.webp" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout small">1931, Отто Клеппнер</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Предположения</h2>
+
+      <ol>
+        <li class="next">Продукты имеют ограниченный срок службы</li>
+        <li class="next">Продажа продукта проходит через определенные этапы</li>
+        <li class="next">Продукты требуют различных стратегий</li>
+      </ol>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/grafiki-zhczp-01.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/pis4.gif" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/auditory.jpg" alt="" style="width: 90%" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/product-life-cycle-diagram-product-extension.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img
+        class="cover h"
+        src="pictures/W_NOV1965_LEVITT_HYPOTHETICAL_LIFE_CYCLE_NYLON_360.png"
+        alt=""
+        style="height: 90%"
+      />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/62_09_46_01.png" alt="" style="height: 90%" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/content_tv_lifecycle.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout small brand">2. Методологии разработки</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Методология</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Методологий много</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Модели</h2>
+      <ol>
+        <li>Каскадная (водопад)</li>
+        <li>Итеративная (инкрементальная)</li>
+        <li>Спиральная</li>
+        <li>V-Model</li>
+        <li>Cleanroom</li>
+        <li>Agile</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Каскадная (водопад)</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/waterfall.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/waterfall-summary.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Итеративная (инкрементальная)</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/Iterative.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Спиральная</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/Спиральная_модель_Барри_Боэма.svg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">V-Model</h2>
+    </section>
+
+    <!-- FROM: https://insights.sei.cmu.edu/blog/using-v-models-for-testing/ -->
+    <section class="slide clear">
+      <img
+        class="cover h"
+        src="pictures/F1_-_Traditional_V_Model.original.jpg"
+        alt=""
+        style="height: 90%"
+      />
+    </section>
+
+    <section class="slide clear">
+      <img
+        class="cover h"
+        src="pictures/F2_-_Executable_Work_Product_V_Model.original.jpg"
+        alt=""
+        style="height: 90%"
+      />
+    </section>
+
+    <section class="slide clear">
+      <img
+        class="cover w"
+        src="pictures/F3_-_Double_V_Model.original.jpg"
+        alt=""
+        style="width: 90%"
+      />
+    </section>
+
+    <section class="slide clear">
+      <img
+        class="cover w"
+        src="pictures/F4_-_Triple_V_Model.original.jpg"
+        alt=""
+        style="width: 90%"
+      />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Cleanroom</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/img-oBsxBV.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Agile</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Agile-манифест</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/agile-manifest.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Основополагающие принципы</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (1)</h2>
+      <p style="font-size: 35px">
+        Наивысшим приоритетом для нас является удовлетворение потребностей заказчика, благодаря
+        регулярной и ранней поставке ценного программного обеспечения.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (2)</h2>
+      <p style="font-size: 35px">
+        Изменение требований приветствуется, даже на поздних стадиях разработки. Agile-процессы
+        позволяют использовать изменения для обеспечения заказчику конкурентного преимущества.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (3)</h2>
+      <p style="font-size: 35px">
+        Работающий продукт следует выпускать как можно чаще, с периодичностью от пары недель до пары
+        месяцев.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (4)</h2>
+      <p style="font-size: 35px">
+        На протяжении всего проекта разработчики и представители бизнеса должны ежедневно работать
+        вместе.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (5)</h2>
+      <p style="font-size: 35px">
+        Над проектом должны работать мотивированные профессионалы. Чтобы работа была сделана,
+        создайте условия, обеспечьте поддержку и полностью доверьтесь им.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (6)</h2>
+      <p style="font-size: 35px">
+        Непосредственное общение является наиболее практичным и эффективным способом обмена
+        информацией как с самой командой, так и внутри команды.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (7)</h2>
+      <p style="font-size: 35px">Работающий продукт — основной показатель прогресса.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (8)</h2>
+      <p style="font-size: 35px">
+        Инвесторы, разработчики и пользователи должны иметь возможность поддерживать постоянный ритм
+        бесконечно. Agile помогает наладить такой устойчивый процесс разработки.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (9)</h2>
+      <p style="font-size: 35px">
+        Постоянное внимание к техническому совершенству и качеству проектирования повышает гибкость
+        проекта.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (10)</h2>
+      <p style="font-size: 35px">
+        Простота — искусство минимизации лишней работы — крайне необходима.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (11)</h2>
+      <p style="font-size: 35px">
+        Самые лучшие требования, архитектурные и технические решения рождаются у самоорганизующихся
+        команд.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Основополагающие принципы (12)</h2>
+      <p style="font-size: 35px">
+        Команда должна систематически анализировать возможные способы улучшения эффективности и
+        соответственно корректировать стиль своей работы.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Lean Development (бережливая)</h2>
+    </section>
+
+    <section class="slide clear">
+      <h2>Типы потерь</h2>
+      <ol>
+        <li>Перепроизводство</li>
+        <li class="next">Излишние запасы</li>
+        <li class="next">Излишняя обработка</li>
+        <li class="next">Ненужные перемещения</li>
+        <li class="next">Выпуск дефектной продукции</li>
+        <li class="next">Ожидание</li>
+        <li class="next">Ненужная транспортировка</li>
+      </ol>
+    </section>
+
+    <section class="slide clear">
+      <h2>Типы потерь в ПО</h2>
+      <ol>
+        <li>Экстра функциональность</li>
+        <li class="next">Требования</li>
+        <li class="next">Дополнительные шаги разработки</li>
+        <li class="next">Поиск информации</li>
+        <li class="next">Баги, не выявленные при тестировании</li>
+        <li class="next">Ожидание решений, ожидание клиентов</li>
+        <li class="next">Передача проекта, требований, знаний, развертывание систем</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">XP</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/xp-core-practices-1.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/107-applied-tdd.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Kanban</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Визуализируйте поток работы</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/Kanban-800.jpeg" alt="" />
+    </section>
+
+    <!-- trello -->
+
+    <section class="slide">
+      <h2>Визуализируйте поток работы</h2>
+      <ol>
+        <li>Запишите все задачи</li>
+        <li class="next">Определите статусы задач</li>
+        <li class="next">Все задачи должны быть на доске</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Ограничьте выполняемую работу</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Ограничьте выполняемую работу</h2>
+      <ol>
+        <li>Зафиксируйте лимит задач</li>
+        <li class="next">Расставьте приоритеты</li>
+        <li class="next">Заканчивайте начатые дела</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/jwgdgihif-gvebagr9tskm0q6ya.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2>Kanban</h2>
+      <ol>
+        <li>Управляйте потоком задач</li>
+        <li class="next">Сделайте договоренности и ожидания явными</li>
+        <li class="next">Анализируйте работу команды</li>
+        <li class="next">
+          Улучшайте совместными усилиями, эволюционируйте на основе экспериментов
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">SCRUM</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/scrumguide.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img
+        class="cover w"
+        src="pictures/2560px-Scrum_process-ru.svg.png"
+        alt=""
+        style="width: 70%"
+      />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Артефакты SCRUM</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Диаграмма сгорания задач</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/Burn.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/skram-umer-da-zdravstvuet-kanban-2.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Бэклог проекта</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Составление бэклога проекта</h2>
+      <ol>
+        <li>Список функций и дорожная карта</li>
+        <li class="next">Пользовательские истории</li>
+        <li class="next">Приоритеты</li>
+        <li class="next">Дата первой поставки и что входит</li>
+        <li class="next">Встреча с командой</li>
+        <li class="next">Оценка и корректировка</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Бэклог спринта</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/849c49.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/125-sprint.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Scrum-доска</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/Scrum-Board.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Цель спринта</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/188-adjustment.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Инкремент продукта</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/increment.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">История пользователя</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Оценка трудоёмкости</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/174-estimates.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Definition of Done</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Скорость команды</h2>
+    </section>
+
+    <section class="slide">
+      <h2>SCRUM-команда</h2>
+      <ol>
+        <li>Команда разработки</li>
+        <li class="next">Владелец продукта</li>
+        <li class="next">SCRUM-мастер</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>SCRUM-встречи</h2>
+      <ol>
+        <li>Планирование спринта</li>
+        <li class="next">Ежедневное собрание команды</li>
+        <li class="next">Обзор спринта</li>
+        <li class="next">Ретроспектива спринта</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Планирование спринта</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/147-gut-feeling.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Ежедневное собрание команды</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/Daily_sprint_meeting.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/dc5b6bb0ad8993cb817e5d8372a52bb8.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/Cjw8e8KVEAIo9JO.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Обзор спринта</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Ретроспектива спринта</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/14-retrospective-accesories.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Покер<br />планирования</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/HOBA-Agile-Planning-Poker-Playcards.jpeg" alt="" />
+    </section>
+
+    <section class="slide" id="6">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_planningpokeronline.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://planningpokeronline.com/" style="font-size: 0.8em"
+          >planningpokeronline.com</a
+        >
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Ретроспектива спринта</h2>
+    </section>
+
+    <section class="slide" id="6">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_www.teamretro.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://www.teamretro.com/" style="font-size: 0.8em">teamretro.com</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Недостатки SCRUM</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/146-applied-scrum.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/16021f3e784bc3d096a6f69c4f6dda7f.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/ussr.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2>SCRUMbut</h2>
+      <ol>
+        <li>Дейли не каждый день</li>
+        <li class="next">Нет ретро</li>
+        <li class="next">Длинные спринты</li>
+        <li class="next">Нет Definition Of Done</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Ещё несколько сравнений</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/1_2Qg44xBA1T_LJC5HWkU2Rw.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover h" src="pictures/2565d2fd90f24888a1ac2c1a150f2cf0.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Выбирайте методологии правильно</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout small brand">3. Традиционный подход</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Веб</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/Iterative.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Аналитика</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Аналитика</h2>
+      <ul>
+        <li>Google Документы</li>
+        <li class="next">Notion</li>
+        <li class="next">Ваша система управления проектом</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Дизайн</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/figma.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Макет</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Фронтенд</h2>
+    </section>
+
+    <section class="slide">
+      <img
+        class="cover w"
+        src="pictures/299-2994011_front-end-development-logos-hd-png-download.png"
+        alt=""
+      />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <a href="https://alexey-avdeev.com/browser-almighty/">Что умеет веб-браузер</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Мобильная разработка</h2>
+    </section>
+
+    <section class="slide">
+      <img
+        class="cover h"
+        src="pictures/Top-7-Programming-language-for-Mobile-App-Development-in-2019-–-Binary-Informatics.jpeg"
+        alt=""
+      />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Бэкенд</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/67337449.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/maxresdefault.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">HTTP</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/http-protocol.webp" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/Client-server-chain.png" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/HTTP & layers.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/HTTP_Request.png" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/HTTP_Response.png" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <a href="https://http.cat/">http.cat</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover w" src="pictures/timing.png" alt="" style="width: 80%" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Postman</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/postman.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <a href="https://postwoman.io/">postwoman.io</a>
+      </h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/public-apis.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/apilist.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2>Медианные зарплаты специалистов</h2>
+      <ol>
+        <li>Веб-дизайнер — 55 000 ₽</li>
+        <li class="next">Ручной тестировщик — 60 000 ₽</li>
+        <li class="next">Бизнес—аналитик — 104 000 ₽</li>
+        <li class="next">Фронтенд — 120 000 ₽</li>
+        <li class="next">Бэкенд — 140 000 ₽</li>
+        <li class="next">Мобильная разработка — 150 000 ₽</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout small brand">4. No-code подход</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/nocode-tweet.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2>Mendix</h2>
+      <blockquote style="margin-left: 90px; margin-top: 100px; font-size: 35px">
+        Разработчики сейчас нужны миру сильнее, чем
+        <nobr>когда-либо</nobr> прежде
+      </blockquote>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">История</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">1985</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/Microsoft-Excel-Logo-history.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/01_7.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/2Rp8uXl.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/dreamweaver-1997.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/02a426d76df027259ae77a432c0f74f87ed6aed0.jpeg" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/Frontpage_screen02.jpeg" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2>Прозвища специалистов по No-Code</h2>
+      <ol>
+        <li>No-coder</li>
+        <li class="next">Maker</li>
+        <li class="next">Citizen Developer</li>
+        <li class="next">Visual Developer</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Что мы имеем ввиду под No-Code</h2>
+      <ol>
+        <li>SaaS tools</li>
+        <li class="next">Developer tools</li>
+        <li class="next">Visual Development tools</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Инструменты (Tools)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">SaaS tools</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Salesforce CRM (1999)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Mailchimp (2001)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Zoom (2013)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Calendly (2013)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Typeform (2016)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Loom (2016)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Clockify (2017)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Developer tools</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Google Analytics (2006)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Disqus (2007)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Stripe (2009)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Algolia (2012)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Strapi (2016)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Visual Development tools</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Google Sheets (2006)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Bubble (2012)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Webflow (2013)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Zapier (2012)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Airtable (2012)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Integromat (2016)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Notion (2016)</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Coda (2019)</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Преимущества No-Code</h2>
+      <ol>
+        <li>Дёшево</li>
+        <li class="next">Быстро</li>
+        <li class="next">Безопасно</li>
+        <li class="next">То, что нужно</li>
+        <li class="next">Работает под всеми платформами</li>
+        <li class="next">Можно всё сделать в одиночку</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Недостатки No-Code</h2>
+      <ol>
+        <li>Дорого в больших масштабах</li>
+        <li class="next">Как у всех</li>
+        <li class="next">Зависите от инструмента</li>
+        <li class="next">Сложный поиск разработчиков</li>
+        <li class="next">Ограниченная кастомизация</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Marketpad</h2>
+      <blockquote style="margin-left: 90px; margin-top: 100px; font-size: 35px">
+        Для 90% небольших бизнесов возможностей <nobr>no-code</nobr> уже более чем достаточно
+      </blockquote>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">No-Code MVP</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_namelix.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://namelix.com/" style="font-size: 0.8em">namelix.com</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_www.tailorbrands.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://www.tailorbrands.com/" style="font-size: 0.8em">tailorbrands.com</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_logopond.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://logopond.com/" style="font-size: 0.8em">logopond.com</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_placeit.net.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://placeit.net/" style="font-size: 0.8em">placeit.net</a>
+      </h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/tilda.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_webflow.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://tilda.cc/ru/" style="font-size: 0.8em">tilda.cc</a>
+      </h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/webflow.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_webflow.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://webflow.com/" style="font-size: 0.8em">webflow.com</a>
+      </h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/biteable.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_biteable.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://biteable.com/" style="font-size: 0.8em">biteable.com</a>
+      </h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/typeform.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">
+        <img
+          src="pictures/qrcode_www.typeform.com.png"
+          alt=""
+          style="width: 40%; margin-bottom: -40px; margin-top: -110px"
+        />
+        <br />
+        <a href="https://www.typeform.com/" style="font-size: 0.8em">typeform.com</a>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Low-Code</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Creatio</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Mendix</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Примеры продуктов</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/getmentor.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="shout brand">Инструменты</h2>
+    </section>
+
+    <section class="slide clear">
+      <img class="cover w" src="pictures/apps.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/product-hunt.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/alternatives-to.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/builtwith.png" alt="" />
+    </section>
+
+    <section class="slide clear">
+      <img class="cover h" src="pictures/backend-frontend-database.png" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2>Фронтенд</h2>
+      <ul>
+        <li>Tilda</li>
+        <li class="next">Webflow</li>
+        <li class="next">Wix</li>
+        <li class="next">WordPress</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Бэкенд</h2>
+      <ul>
+        <li>Zapier (2012)</li>
+        <li class="next">Integromat (2016)</li>
+        <li class="next">IFTTT (2010)</li>
+        <li class="next">Albato (2010)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>База данных</h2>
+      <ul>
+        <li>Google Таблицы</li>
+        <li class="next">Airtable</li>
+        <li class="next">Excel</li>
+        <li class="next">Notion</li>
+        <li class="next">Coda</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Личные кабинеты</h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Изучайте инструменты</h2>
+    </section>
+
+    <section class="slide" id="last-slide">
+      <h2>👏 Спасибо!</h2>
+
+      <ul>
+        <li>👨 Алексей Авдеев</li>
+        <li>🌐 <a href="https://github.com/avdeev">github.com/avdeev</a></li>
+        <li>
+          🌐
+          <a href="https://twitter.com/avdeev_alexey">twitter.com/avdeev_alexey</a>
+        </li>
+        <li>
+          🌐
+          <a href="https://vk.com/alexey.avdeev">vk.com/alexey.avdeev</a>
+        </li>
+
+        <li>🌐 Продуктовая лаборатория <a href="https://mish.design/">Mish</a></li>
+      </ul>
+      <img src="pictures/qrcode.png" alt="qr tg" />
+      <style>
+        #last-slide li {
+          font-size: 28px;
+        }
+
+        #last-slide img {
+          height: 300px;
+          position: absolute;
+          right: 95px;
+          top: 120px;
+        }
+      </style>
+    </section>
+
+    <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/@shower/core/dist/shower.js"></script>
+    <!-- Copyright © 2021 Yours Truly, Famous Inc. -->
+  </body>
+</html>
